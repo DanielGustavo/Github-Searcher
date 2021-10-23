@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap');
+
 :root {
   --primary-color: #45E4B4;
   --dark-primary-color: #3CC69C;
@@ -8,7 +10,7 @@
 }
 
 body, input, button {
-  font-family: Ubuntu, Arial, Helvetica, sans-serif;
+  font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
 }
 
 button {

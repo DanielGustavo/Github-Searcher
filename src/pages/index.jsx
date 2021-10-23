@@ -11,7 +11,12 @@ const HomePage = () => (
     <Image src={Logo} alt="Github Searcher" width={303} height={148} />
 
     <div className={styles.inputContainer}>
-      <Input className={styles.input} buttonIcon="search" />
+      <Input
+        className={styles.input}
+        buttonIcon="search"
+        name="username"
+        placeholder="Insert a username"
+      />
       <button className={styles.button}>Search</button>
     </div>
   </div>

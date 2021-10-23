@@ -1,0 +1,56 @@
+:root {
+  --primary-color: #45E4B4;
+  --dark-primary-color: #3CC69C;
+  --dark-color: #45E4B4;
+  --dark-gray-color: #1F2020;
+  --gray-color: #ACB0B0;
+  --light-color: #F5F5F5;
+}
+
+body, input, button {
+  font-family: Ubuntu, Arial, Helvetica, sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  background-color: var(--dark-gray-color);
+  color: var(--light-color);
+}
+
+* {
+  outline-color: var(--primary-color);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+@media (max-width: 356px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 356px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1440px) and (min-width: 768px) {
+  html {
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 1440px) {
+  html {
+    font-size: 31px;
+  }
+}

@@ -1,0 +1,31 @@
+.input {
+  display: flex;
+}
+
+.input input, .inputFullBoarded input {
+  background-color: var(--light-color);
+  border: none;
+  padding: 15px;
+  border-radius: 5px 0 0 5px;
+}
+
+.inputFullBoarded input {
+  border-radius: 5px;
+}
+
+.input button {
+  flex: 1;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  padding: 0 15px;
+  background-color: var(--primary-color);
+  color: var(--dark-gray-color);
+}
+
+.input button:hover {
+  background-color: var(--dark-primary-color);
+}
+
+.input button:active {
+  background-color: var(--primary-color);
+}

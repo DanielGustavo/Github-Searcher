@@ -10,7 +10,10 @@ const HomePage = () => (
   <div className={`${styles.container} container`}>
     <Image src={Logo} alt="Github Searcher" width={303} height={148} />
 
-    <Input className={styles.input} buttonIcon="search" />
+    <div className={styles.inputContainer}>
+      <Input className={styles.input} buttonIcon="search" />
+      <button className={styles.button}>Search</button>
+    </div>
   </div>
 )
 

@@ -14,7 +14,9 @@ const HomePage = () => {
     const form = event.target;
     const { username: { value: username } } = form;
 
-    Router.push(`/users/${username}`);
+    if (username) {
+      Router.push(`/users/${username}`);
+    }
   }
 
   return (

@@ -3,7 +3,7 @@
 :root {
   --primary-color: #45E4B4;
   --dark-primary-color: #3CC69C;
-  --dark-color: #45E4B4;
+  --dark-color: #141515;
   --dark-gray-color: #1F2020;
   --gray-color: #ACB0B0;
   --light-color: #F5F5F5;
@@ -13,7 +13,7 @@ body, input, button {
   font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
 }
 
-button {
+button, .pointer {
   cursor: pointer;
 }
 
@@ -29,30 +29,34 @@ body {
   box-sizing: border-box;
 }
 
-.container {
-  margin-top: 20px;
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-@media (max-width: 375px) {
+.container {
+  margin-top: 20px;
+
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+@media (max-width: 475px) {
   .container {
     padding-left: 6% !important;
     padding-right: 6% !important;
   }
 }
 
-@media (max-width: 356px) {
+@media (max-width: 368px) {
   html {
-    font-size: 15px;
+    font-size: 20px;
   }
 }
 
-@media (max-width: 768px) and (min-width: 356px) {
-  html {
-    font-size: 18px;
-  }
-}
-
-@media (max-width: 1440px) and (min-width: 768px) {
+@media (max-width: 1440px) and (min-width: 368px) {
   html {
     font-size: 25px;
   }

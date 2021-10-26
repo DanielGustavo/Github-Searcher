@@ -1,0 +1,71 @@
+.container {
+  display: flex;
+}
+
+.container img {
+  border-radius: 50%;
+}
+
+.container svg {
+  color: var(--primary-color);
+}
+
+.container .userDatas {
+  padding: 10px 0 10px 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container .userMetadatas div {
+  margin-top: 10px;
+  display: flex;
+}
+
+.container .userMetadatas div span {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.container .userMetadatas div span small {
+  margin-left: 5px;
+  font-size: 0.6rem;
+}
+
+.container h1 {
+  color: var(--primary-color);
+}
+
+.container small {
+  color: var(--gray-color);
+  font-size: 0.7rem;
+}
+
+.container h1 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.starIcon {
+  fill: var(--primary-color);
+}
+
+@media (max-width: 475px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container div {
+    text-align: center;
+  }
+
+  .userMetadatas {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

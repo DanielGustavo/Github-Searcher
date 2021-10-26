@@ -1,0 +1,30 @@
+.userDatas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.separator {
+  margin: auto 40px;
+  height: 150px;
+  border-left: 2px solid var(--dark-color);
+}
+
+@media (max-width: 816px) {
+  .separator {
+    height: 1px;
+    width: 50%;
+    border-left: none;
+    border-bottom: 2px solid var(--dark-color);
+    margin: 10px auto;
+  }
+
+  .publicReposBox {
+    width: 50%;
+    min-width: 260px;
+  }
+
+  .userDatas {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,52 @@
+.container {
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.repositoryDatas {
+  flex-direction: column;
+}
+
+.starIcon {
+  fill: var(--primary-color);
+}
+.container svg {
+  color: var(--primary-color);
+}
+
+.description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 10px;
+}
+
+.container h2 {
+  color: var(--light-color);
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+.container small {
+  font-size: 0.6rem;
+  color: var(--gray-color);
+}
+
+.container .repositoryMetadatas {
+  display: flex;
+  margin-top: 20px;
+}
+
+.container .repositoryMetadatas span svg {
+  margin-right: 5px;
+}
+
+.container .repositoryMetadatas span {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}

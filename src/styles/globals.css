@@ -7,6 +7,7 @@
   --dark-gray-color: #1F2020;
   --gray-color: #ACB0B0;
   --light-color: #F5F5F5;
+  --danger-color: #E34F4F;
 }
 
 body, input, button {
@@ -66,4 +67,18 @@ body {
   html {
     font-size: 31px;
   }
+}
+
+h1 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+small {
+  font-size: 0.7rem;
 }

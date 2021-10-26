@@ -11,6 +11,7 @@ import User from '../../components/User';
 import PublicRepositoriesBox from '../../components/PublicRepositoriesBox';
 import Header from '../../components/Header';
 import Repositories from '../../components/Repositories';
+import ErrorBox from '../../components/ErrorBox';
 
 import styles from '../../styles/users.module.css';
 
@@ -31,22 +32,33 @@ const UsernamePage = ({ user, repositories, error }) => {
     <>
       <Header />
 
-      {error !== undefined ? error : (
-        <div className={`${styles.container} container`}>
-          <div className={styles.userDatas}>
-            <User {...user} className={styles.user} />
-
-            <span className={styles.separator}></span>
-
-            <PublicRepositoriesBox
-              className={styles.publicReposBox}
-              repositoriesCount={user.public_repos}
+      {error !== undefined
+        ? (
+          <div className="container">
+            <ErrorBox
+              title="Something went wrong 😕"
+              message={error}
+              className={styles.errorBox}
             />
           </div>
+        )
+        : (
+          <div className="container">
+            <div className={styles.userDatas}>
+              <User {...user} className={styles.user} />
 
-          <Repositories repositories={repositories} />
-        </div>
-      )}
+              <span className={styles.separator}></span>
+
+              <PublicRepositoriesBox
+                className={styles.publicReposBox}
+                repositoriesCount={user.public_repos}
+              />
+            </div>
+
+            <Repositories repositories={repositories} />
+          </div>
+        )
+      }
     </>
   );
 };
@@ -63,7 +75,6 @@ export async function getStaticProps({ params }) {
     const user = await getUserFromUsername(params.username);
     const repositories = await getRepositoriesFromUsername(params.username);
     const stars = await getStarsFromUsername(params.username)
-
 
     return {
       props: { user: { ...user, stars }, repositories },

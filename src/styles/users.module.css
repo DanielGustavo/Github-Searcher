@@ -28,3 +28,26 @@
     flex-direction: column;
   }
 }
+
+.errorBox {
+  width: 40%;
+  margin: 20px auto;
+}
+
+@media (max-width: 925px) {
+  .errorBox {
+    width: 50%;
+  }
+}
+
+@media (max-width: 740px) {
+  .errorBox {
+    width: 60%;
+  }
+}
+
+@media (max-width: 620px) {
+  .errorBox {
+    width: 100%;
+  }
+}

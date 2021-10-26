@@ -28,9 +28,8 @@
 
 .container h2 {
   color: var(--light-color);
-  font-weight: 500;
-  font-size: 0.8rem;
 }
+
 .container small {
   font-size: 0.6rem;
   color: var(--gray-color);

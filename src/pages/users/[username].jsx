@@ -13,6 +13,8 @@ import Header from '../../components/Header';
 import Repositories from '../../components/Repositories';
 import ErrorBox from '../../components/ErrorBox';
 
+import HttpError from '../../errors/HttpError';
+
 import styles from '../../styles/users.module.css';
 
 const UsernamePage = ({ user, repositories, error }) => {
@@ -80,9 +82,15 @@ export async function getStaticProps({ params }) {
       props: { user: { ...user, stars }, repositories },
       revalidate: 60 * 5,
     };
-  } catch {
+  } catch (error) {
+    let errorMessage = `It was not possible to fetch ${params.username}'s datas`;
+
+    if (error instanceof HttpError) {
+      errorMessage = error.message;
+    }
+
     return {
-      props: { error: `It was not possible to fetch ${params.username}\'s datas` },
+      props: { error: errorMessage },
       revalidate: 30,
     }
   }

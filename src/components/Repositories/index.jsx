@@ -15,6 +15,6 @@ const Repositories = ({ repositories = [] }) => (
       />
     ))}
   </div>
-)
+);
 
 export default Repositories;

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import FeatherIcon from 'feather-icons-react';
 
-import styles from './styles.module.css'
+import styles from './styles.module.css';
 
 const User = ({
   login,
@@ -55,6 +55,6 @@ const User = ({
       </div>
     </div>
   </div>
-)
+);
 
 export default User;

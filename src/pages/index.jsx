@@ -12,7 +12,9 @@ const HomePage = () => {
     event.preventDefault();
 
     const form = event.target;
-    const { username: { value: username } } = form;
+    const {
+      username: { value: username },
+    } = form;
 
     if (username) {
       Router.push(`/users/${username}`);

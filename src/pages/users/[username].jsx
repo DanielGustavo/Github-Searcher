@@ -18,7 +18,7 @@ import HttpError from '../../errors/HttpError';
 import styles from '../../styles/users.module.css';
 
 const UsernamePage = ({ user, repositories, error }) => {
-  const { isFallback } = useRouter()
+  const { isFallback } = useRouter();
 
   if (isFallback) {
     return (
@@ -34,33 +34,30 @@ const UsernamePage = ({ user, repositories, error }) => {
     <>
       <Header />
 
-      {error !== undefined
-        ? (
-          <div className="container">
-            <ErrorBox
-              title="Something went wrong 😕"
-              message={error}
-              className={styles.errorBox}
+      {error !== undefined ? (
+        <div className="container">
+          <ErrorBox
+            title="Something went wrong 😕"
+            message={error}
+            className={styles.errorBox}
+          />
+        </div>
+      ) : (
+        <div className="container">
+          <div className={styles.userDatas}>
+            <User {...user} className={styles.user} />
+
+            <span className={styles.separator}></span>
+
+            <PublicRepositoriesBox
+              className={styles.publicReposBox}
+              repositoriesCount={user.public_repos}
             />
           </div>
-        )
-        : (
-          <div className="container">
-            <div className={styles.userDatas}>
-              <User {...user} className={styles.user} />
 
-              <span className={styles.separator}></span>
-
-              <PublicRepositoriesBox
-                className={styles.publicReposBox}
-                repositoriesCount={user.public_repos}
-              />
-            </div>
-
-            <Repositories repositories={repositories} />
-          </div>
-        )
-      }
+          <Repositories repositories={repositories} />
+        </div>
+      )}
     </>
   );
 };
@@ -76,7 +73,7 @@ export async function getStaticProps({ params }) {
   try {
     const user = await getUserFromUsername(params.username);
     const repositories = await getRepositoriesFromUsername(params.username);
-    const stars = await getStarsFromUsername(params.username)
+    const stars = await getStarsFromUsername(params.username);
 
     return {
       props: { user: { ...user, stars }, repositories },
@@ -92,7 +89,7 @@ export async function getStaticProps({ params }) {
     return {
       props: { error: errorMessage },
       revalidate: 30,
-    }
+    };
   }
 }
 

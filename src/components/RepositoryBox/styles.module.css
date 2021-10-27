@@ -30,6 +30,11 @@
   color: var(--light-color);
 }
 
+.container h2 a {
+  color: var(--light-color);
+  text-decoration: none;
+}
+
 .container small {
   font-size: 0.6rem;
   color: var(--gray-color);

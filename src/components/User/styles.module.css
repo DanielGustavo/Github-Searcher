@@ -18,6 +18,11 @@
   justify-content: space-between;
 }
 
+.container .userDatas h1 a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
 .container .userMetadatas div {
   margin-top: 10px;
   display: flex;

@@ -4,10 +4,21 @@ import Box from '../Box';
 
 import styles from './styles.module.css';
 
-const RepositoryBox = ({ title, description, stars, forks, className }) => (
+const RepositoryBox = ({
+  title,
+  description,
+  stars,
+  forks,
+  className,
+  html_url,
+}) => (
   <Box className={`${styles.container} ${className}`}>
     <div className={styles.repositoryDatas}>
-      <h2>{title}</h2>
+      <h2>
+        <a href={html_url} target="_blank" rel="noreferrer">
+          {title}
+        </a>
+      </h2>
 
       <small className={styles.description}>{description}</small>
     </div>

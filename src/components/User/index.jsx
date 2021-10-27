@@ -12,6 +12,7 @@ const User = ({
   followers,
   className,
   stars,
+  html_url,
 }) => (
   <div className={`${styles.container} ${className}`}>
     <Image
@@ -24,7 +25,11 @@ const User = ({
 
     <div className={styles.userDatas}>
       <div>
-        <h1>{name}</h1>
+        <h1>
+          <a href={html_url} target="_blank" rel="noreferrer">
+            {name}
+          </a>
+        </h1>
         <small>{login}</small>
       </div>
 

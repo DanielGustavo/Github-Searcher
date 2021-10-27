@@ -12,6 +12,7 @@ const Repositories = ({ repositories = [] }) => (
         stars={repository.stargazers_count}
         forks={repository.forks_count}
         key={repository.id}
+        html_url={repository.html_url}
       />
     ))}
   </div>

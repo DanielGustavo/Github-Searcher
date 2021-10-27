@@ -1,34 +1,64 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">
 
-## Getting Started
+![GithubSearcher](./docs/logo.svg)
 
-First, run the development server:
+</h1>
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+![](./docs/example.gif)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Table of contents
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+<!--ts-->
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- [How to run the application](#How-to-run-the-application)
+  - [Development server](#Development-server)
+  - [Build](#Build)
+  - [Access the website](#Access-the-website)
+- [Tecnologies](#Tecnologies)
+- [Author](#Author)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+<!--te-->
 
-## Learn More
+# How to run the application
 
-To learn more about Next.js, take a look at the following resources:
+## Development server
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Install the dependecies:
+   ```bash
+   $ yarn
+   ```
+2. Start the development server:
+   ```bash
+   $ yarn dev
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Build
 
-## Deploy on Vercel
+1. Install the dependecies:
+   ```bash
+   $ yarn
+   ```
+2. Start building:
+   ```bash
+   $ yarn build
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Access the website
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Access the website deployed on heroku: https://githubsearcher-daniel.vercel.app.
+
+# Tecnologies
+
+- [React](https://reactjs.org/)
+- [NextJs](https://nextjs.org/)
+- [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+
+# Author
+
+<a href="https://github.com/DanielGustavo">
+  <img width=100 alt="Daniel Gustavo" src="https://avatars0.githubusercontent.com/u/51492635?v=4">
+</a>
+
+<p>Made by <a href="https://github.com/DanielGustavo"><b>Daniel Gustavo</b></a></p>
+
+[![Gmail Badge](https://img.shields.io/badge/-danielgustavo5205@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:danielgustavo5205@gmail.com)](mailto:danielgustavo5205@gmail.com)

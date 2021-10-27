@@ -4,6 +4,10 @@
   align-items: center;
 }
 
+.container form {
+  margin-bottom: 40px;
+}
+
 .inputContainer {
   margin-top: 40px;
   width: 50%;

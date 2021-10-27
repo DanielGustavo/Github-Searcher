@@ -9,7 +9,6 @@ import {
 
 import User from '../../components/User';
 import PublicRepositoriesBox from '../../components/PublicRepositoriesBox';
-import Header from '../../components/Header';
 import Repositories from '../../components/Repositories';
 import ErrorBox from '../../components/ErrorBox';
 
@@ -30,35 +29,33 @@ const UsernamePage = ({ user, repositories, error }) => {
     );
   }
 
+  if (error) {
+    return (
+      <div className="container">
+        <ErrorBox
+          title="Something went wrong 😕"
+          message={error}
+          className={styles.errorBox}
+        />
+      </div>
+    );
+  }
+
   return (
-    <>
-      <Header />
+    <div className="container">
+      <div className={styles.userDatas}>
+        <User {...user} className={styles.user} />
 
-      {error !== undefined ? (
-        <div className="container">
-          <ErrorBox
-            title="Something went wrong 😕"
-            message={error}
-            className={styles.errorBox}
-          />
-        </div>
-      ) : (
-        <div className="container">
-          <div className={styles.userDatas}>
-            <User {...user} className={styles.user} />
+        <span className={styles.separator}></span>
 
-            <span className={styles.separator}></span>
+        <PublicRepositoriesBox
+          className={styles.publicReposBox}
+          repositoriesCount={user.public_repos}
+        />
+      </div>
 
-            <PublicRepositoriesBox
-              className={styles.publicReposBox}
-              repositoriesCount={user.public_repos}
-            />
-          </div>
-
-          <Repositories repositories={repositories} />
-        </div>
-      )}
-    </>
+      <Repositories repositories={repositories} />
+    </div>
   );
 };
 

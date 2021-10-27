@@ -1,7 +1,4 @@
 import Router from 'next/router';
-import Image from 'next/image';
-
-import Logo from '../assets/images/Logo.png';
 
 import Input from '../components/Input';
 
@@ -23,8 +20,6 @@ const HomePage = () => {
 
   return (
     <div className={`${styles.container} container`}>
-      <Image src={Logo} alt="Github Searcher" width={303} height={148} />
-
       <form onSubmit={handleSubmit} className={styles.inputContainer}>
         <Input
           className={styles.input}

@@ -3,3 +3,15 @@
   align-items: center;
   justify-content: space-between;
 }
+
+.container img {
+  width: 143px;
+}
+
+.onlyLogo {
+  justify-content: center;
+}
+
+.onlyLogo img {
+  width: 303px;
+}

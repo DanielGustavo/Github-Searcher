@@ -45,7 +45,7 @@
 
 ## Access the website
 
-1. Access the website deployed on heroku: https://githubsearcher-daniel.vercel.app.
+1. Access the website deployed on vercel: https://githubsearcher-daniel.vercel.app.
 
 # Tecnologies
 
